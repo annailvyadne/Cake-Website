@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+    font-family: 'Nerko One', cursive; /* Applying the Nerko One font */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffaf2;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 80px; /* Adjust logo size as needed */
+    margin-right: 10px;
+}
+
+.navbar-brand a {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Nerko One', cursive; /* Applying the Nerko One font */
+}
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding-right: 40px;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 60px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 28px;
+    font-family: 'Nerko One', cursive; /* Applying the Nerko One font */
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #fffaf2;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-content.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust spacing as needed */
+    flex: 1;
+}
+
+.about-text {
+    flex: 2;
+    font-family: 'Quicksand';
+}
+
+.about-text h2 {
+    margin-top: 0;
+    font-family: 'Nerko One', cursive;
+    font-size: 32px;
+}
+
+.about-text p {
+    margin: 20px 0;
+    font-family: 'Quicksand';
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6f61; /* Button color */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 0 0 20px;
+        width: 100%;
+        max-height: none; /* Remove max-height for small screens */
+    }
+
+    .about-text {
+        flex: none;
+    }
+}
+
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    background-color: #fffaf2; /* Match background color */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 1.5s ease; /* Smooth transition */
+    opacity: 0; /* Start with invisible gallery items */
+    transform: translateY(20px); /* Start with an offset */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Increase image size on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* General Styles */
+.cakes {
+    padding: 40px 0;
+}
+
+.main-header {
+    font-family: 'Nerko One', cursive;
+    font-size: 48px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cake Category Styles */
+.cake-category {
+    margin-bottom: 40px;
+}
+
+.cake-category h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Nerko One', cursive;
+    font-size: 32px;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Smooth transition */
+    margin: 20px;
+    margin-left: 50px;
+    gap: 20px;
+    opacity: 0; /* Start with invisible cards */
+    transform: translateY(20px); /* Start with an offset */
+    will-change: opacity, transform; /* Optimize animations */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    font-family: 'Quicksand';
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+
+/* FAQ Section */
+.faq {
+    padding: 40px 0;
+}
+
+.main-header {
+    font-family: 'Nerko One', cursive;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Fade-in Effect for FAQ Items */
+.accordion-button {
+    background-color: #f8f9fa; /* Default background color */
+    color: #000; /* Default text color */
+    border: 1px solid #ddd; /* Border color */
+    transition: background-color 0.2s ease;
+    opacity: 0; /* Start with invisible */
+    transform: translateY(20px); /* Start with an offset */
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Smooth transition */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffd9dd; /* Background color when expanded */
+    color: #000; /* Text color when expanded */
+    border-color: #ffd9dd; /* Border color when expanded */
+}
+
+.accordion-button::after {
+    filter: invert(0); /* Adjust icon color if needed */
+}
+
+/* Optional: Hover effect */
+.accordion-button:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+
+
+
+.contact-us {
+  position: relative;
+  background-image: linear-gradient(
+    rgba(255, 221, 221, 0.8), 
+    rgba(255, 221, 221, 0.8)
+  ), url('images/contact-us-cake.png');
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between the form and info sections */
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  font-family: 'Nerko One', sans-serif;
+  font-size: 48px;
+  text-align: center;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 18px; 
+  font-family: 'Quicksand';
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+  background-color: #ff6f61; /* Button color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #ff4a3d; /* Darker shade for hover effect */
+}
+
+.contact-info h2 {
+  font-family: 'Quicksand';
+  margin-top: 50px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 18px; 
+  font-family: 'Quicksand';
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form h2, .contact-info h2 {
+    font-size: 36px;
+  }
+
+  .contact-form label, .contact-info p {
+    font-size: 16px;
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack form and info vertically on smaller screens */
+    gap: 10px; /* Reduced gap for smaller screens */
+  }
+
+  .contact-form, .contact-info {
+    width: 100%; /* Ensure full width for smaller screens */
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form h2, .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form label, .contact-info p {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+  }
+}
+
+
